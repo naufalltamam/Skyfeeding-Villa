@@ -149,11 +149,11 @@ footer {
     <p>Choose our menu</p>
   </div>
 
-  <div class="card">
-    <span>📅</span>
+  <div class="card" onclick="showPage('rundown')">
+    <div class="icon">📅</div>
     <h3>Rundown</h3>
     <p>Event schedule</p>
-  </div>
+</div>
 
   <div class="card">
     <span>📸</span>
@@ -178,7 +178,25 @@ footer {
   VILLA PROJECT © 2026
   <br>Made for good memories.
 </footer>
+<script>
+function showPage(page) {
+    if (page === 'rundown') {
+        document.getElementById('rundown').style.display = 'block';
+        document.getElementById('rundown').scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+}
+</script>
 
+<section id="rundown" style="display:none; padding:30px; color:white;">
+    <h2>📅 Event Rundown</h2>
+    <p>Coming Soon — Jadwal acara akan segera ditambahkan.</p>
+    <button onclick="document.getElementById('rundown').style.display='none'">
+        Kembali
+    </button>
+</section>
+  
 </body>
 </html>
  
